@@ -12,9 +12,19 @@ const app = new Vue({
     methods: {
         next: function() {
             console.log('dopo');
+            this.counter += 1;
+            console.log(this.counter);
+            if(this.counter > this.img.length -1){
+                this.counter = 0;
+            }
         },
         prev: function() {
             console.log('prima');
+            this.counter -= 1;
+            console.log(this.counter);
+            if(this.counter < 0){
+                this.counter = this.img.length -1;
+            }
         }
     }
    
