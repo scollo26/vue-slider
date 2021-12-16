@@ -7,7 +7,8 @@ const app = new Vue({
         'image2.jpg',
         'image3.jpg',
         'image4.jpg'
-    ]
+    ],
+    active:'active'
     },
     methods: {
         next: function() {
@@ -25,7 +26,8 @@ const app = new Vue({
             if(this.counter < 0){
                 this.counter = this.img.length -1;
             }
-        }
+        },
+       
     }
    
 })
