@@ -18,7 +18,8 @@
         <i class="fas fa-angle-left"></i>
       </div>
       <div class="images">
-        <img :src="`images/${img[counter]}`" alt="">
+          <!-- mouse sopra foto si stoppa mouseover/mouseleave riparte -->
+        <img  @mouseover="stop" @mouseleave="timing" :src="`images/${img[counter]}`" alt="">
       </div>
       <div @click="next" class="next">
         <i class="fas fa-angle-right"></i>

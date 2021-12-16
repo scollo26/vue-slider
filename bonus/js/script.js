@@ -27,9 +27,20 @@ const app = new Vue({
             }
         },
         // slide pallini sincronizzato con foto
-        slideDown: function (index) {
-            this.counter = index;
-        }
+    slideDown: function (index) {
+        this.counter = index;
+    },
+     // timer scorrimento foto 3 secondi
+    timing() {
+        this.timer = setInterval(this.next,3000);
+        },
+        // stop scorrimento foto
+        stop(){
+            clearInterval(this.timer);
+        } 
+    },
+    created() {
+        this.timing();
     }
-    
+
 });
